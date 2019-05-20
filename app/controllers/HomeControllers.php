@@ -5,7 +5,7 @@ Class HomeControllers{
         session_start();
         session_destroy();
         $folder = $_SERVER['DOCUMENT_ROOT'];
-        require_once('/ressources/views/index.php');   
+        require_once('ressources/views/index.php');   
     }
 
     public function response(){
