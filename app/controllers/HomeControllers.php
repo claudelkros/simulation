@@ -4,19 +4,16 @@ Class HomeControllers{
     public function index(){
         session_start();
         session_destroy();
-        $folder = $_SERVER['DOCUMENT_ROOT'];
         require_once('ressources/views/index.php');   
     }
 
     public function response(){
-        $folder = $_SERVER['DOCUMENT_ROOT'];
-        require_once($folder.'/simulation/ressources/views/pages/response.php');   
+        require_once('ressources/views/pages/response.php');   
     }
 
     public function detection(){
 
-        $folder = $_SERVER['DOCUMENT_ROOT'];
-        require_once($folder.'/simulation/ressources/views/pages/detection.php');   
+        require_once('ressources/views/pages/detection.php');   
     }
 
     public function intimidation(){
@@ -30,11 +27,9 @@ Class HomeControllers{
                 $error_message = "Nous avons remarquez vos tentative d'accéder a un contenu protégé";
                 $error_descript = "Vous avez essayer plusieurs fois des noms et mot de passe différent a plusieurs reprise. nous vous surveillons.";
             }
-            $folder = $_SERVER['DOCUMENT_ROOT'];
-            require_once($folder.'/simulation/ressources/views/pages/intimidation.php');
+            require_once('ressources/views/pages/intimidation.php');
         }else{
-            $folder = $_SERVER['DOCUMENT_ROOT'];
-            require_once($folder.'/simulation/ressources/views/pages/intimidation.php');
+            require_once('ressources/views/pages/intimidation.php');
         }
         
         
@@ -48,15 +43,13 @@ Class HomeControllers{
                 $error_message = "Les identifiants utiliser contient des valeurs ayant pour objectifs forcer l'accès au système ";
                 $error_descript = "Veuillez éviter cela s'il vous plaît. Ceci est un avertissement";
             }
-            $folder = $_SERVER['DOCUMENT_ROOT'];
-            require_once($folder.'/simulation/ressources/views/pages/prevention.php');   
+            require_once('ressources/views/pages/prevention.php');   
         }else{
             $success_message = "les identifiants sont correctes ";
             $success_descript = "Continuer afin d'observer le comportement du parfeu";
             
         }
-        $folder = $_SERVER['DOCUMENT_ROOT'];
-            require_once($folder.'/simulation/ressources/views/pages/prevention.php');   
+            require_once('ressources/views/pages/prevention.php');   
     }
 
 }
