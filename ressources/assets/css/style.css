@@ -1,0 +1,227 @@
+body, html {
+  padding: 0;
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+  font-size: 1.1rem;
+}
+
+header {
+  width: 100%;
+  order: 1;
+  color: #fff;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sticky {
+  display: none;
+}
+
+.sticky img {
+  color: #fff;
+  height: 20px;
+  width: 25px;
+}
+
+.nav {
+  padding: 10px;
+  background: black;
+}
+
+.nav-link img {
+  background: #fff;
+  height: 24px;
+  width: 34px;
+  margin: 5px 0px;
+}
+
+.nav-title {
+  padding: 10px;
+  color: aliceblue;
+}
+
+.nav-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.nav-link > li {
+  list-style: none;
+  padding: 10px;
+  color: aliceblue;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .nav-link {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .sticky {
+    display: block;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.body {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 2;
+          order: 2;
+  height: auto;
+}
+
+footer {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 3;
+          order: 3;
+  height: 50px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background: #000;
+}
+footer a {
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
+
+.body__container{
+  display: grid;
+  grid-template:repeat(3, 250px) / repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+.b_c_row{
+    min-height: 250px;
+    padding: 20px;
+    background-color: rgb(41, 36, 36);
+}
+.b_c_row-1{
+  background: url("https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500") no-repeat;
+  background-position: center;
+  background-size: cover; 
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+.b_c_row-2{
+  background: url("https://as2.ftcdn.net/jpg/01/09/15/99/500_F_109159900_LqOcsitioqWcEnsT1pdrosvXmjydeDcp.jpg") no-repeat;
+  background-position: center;
+  background-size: cover; 
+  color: #fff;
+  font-size: 1.5rem;
+  border: #dedce6 1px solid;
+  padding: 10px;
+}
+.b_c_row-3{
+  background: url("https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500") no-repeat;
+  background-position: center;
+  background-size: cover; 
+  color: #fff;
+  font-size: 1.5rem;
+  border: #dedce6 1px solid;
+  padding: 10px;
+}
+
+
+/*Section Response */
+.response_container{
+  display: flex;
+  flex-direction: row;
+}
+.sidebar-1{
+  width: 30%;
+  order: 2;
+  padding:20px;
+}
+.sidebar-2{
+  order: 4;
+  width: 20%;
+  padding: 20px;
+}
+.response_content{
+  order: 3;
+  width: 50%;
+  height: 100vh;
+  background: url("https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500") no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+}
+.img{
+  height: 50px;
+  width: 50px;
+}
+.response_content > .form{
+  margin-top: 50px;
+}
+input{
+  margin-top: 30px;
+}
+input[type=text], input[type=password]{
+  width: 50%;
+  height: 1.5rem;
+  outline: none;
+  border: #dedce6 1px solid;
+}
+input[type=submit]{
+  width: 20%;
+  color: black;
+  padding: 5px;
+  border: 0.001rem solid black;
+  font-size: 0.9rem;
+  transition: 0.5s;
+}
+input[type=submit]:hover{
+  width: 20%;
+  background: black;
+  color: #fff;
+  padding: 5px;
+  border: 1px solid black;
+  font-size: 0.9rem;
+}
