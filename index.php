@@ -13,6 +13,5 @@ if($uri[-1] == '/'){
 }elseif($_GET['Q'] == 'prevention'){
     $app->prevention();
 }else{
-    echo $uri;
-    "<div>" .var_dump($_SERVER). "</div>";
+     $app->index();
 }
